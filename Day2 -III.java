@@ -51,9 +51,9 @@ class MinNum{
 /*2.Write a program to do the following patterns using for loop?
 a)/* 1    1
       1  1 
-	   1 
+	1 
       1  1
-	 1    1   */
+     1     1
 class OneXpattern{
 	public static void main(String[] args){
 		int rows =5;
@@ -81,11 +81,12 @@ class Rpatern{
 		int rows = 5;
 		for(int i=1;i<=rows;i++){
 			for(int j=1;j<=rows;j++){
-		        if(j==1 || (i == 1 && j < rows) || (i == 3 && j < rows) || (j == rows && i == 2) || (i == j && i > 3)){
+		           if(i == 1 || i == 3){
 					System.out.print("R ");
-				}else{
+		           }else if(j==1 || (i == 2 && j == col) || (i == 4 && j == 3)  || (i == 5 && j == 4)){
+					System.out.print("R ");
+			   }else{
 					System.out.print("  ");
-				}
 			}
 			System.out.println();
 		}
@@ -237,7 +238,7 @@ class SumEven{
 	public static void main(String[] args){
 		int sum=0;
 		for(int i=1; i<=100; i++){
-			if( i % 2 != 0){
+			if( i % 2 == 0){
 				sum+=i;
 			}
 			else{
